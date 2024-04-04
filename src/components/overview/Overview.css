@@ -1,0 +1,153 @@
+/* margin top para el contenido*/
+.Overview {
+    margin-top: 100px;
+  }
+
+/*distribucion del contenido*/
+.Overviewcontainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /*4 columnas*/
+    grid-gap: 20px;  /*espacio entre cartas*/
+  }
+
+/*estilo de la tarjeta*/
+.Overviewcard {
+    border: 1px transparent gray;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+    -webkit-box-shadow: -1px 0px 18px -8px rgba(84,84,84,1);
+    -moz-box-shadow: -1px 0px 18px -8px rgba(84,84,84,1);
+    box-shadow: -1px 0px 18px -8px rgba(84,84,84,1);
+    overflow: hidden; 
+    transition: transform 0.3s ease;
+  }
+
+.Overviewcard:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al 110% */
+    background-color: #E9F5E3; 
+  }
+
+/*titulo de contact list y favorite*/
+.Overviewtitle{
+    font-family: "Lato", sans-serif;
+    font-size: 35px;
+    margin-bottom: 10px;
+    margin-top: 80px;
+    margin-left: 25px;
+    letter-spacing: 1.5px;
+    line-height: 1.2;
+  }
+
+/*photo de cartas */
+.Overviewphoto img {
+    border-radius: 50%;
+    border: 5px solid #C1D72F;
+    width: 110px; 
+    height: 110px; 
+  }
+
+  img:hover{
+    border: 5px solid white;
+  }
+  
+/*para nombre, email de la carta*/
+.Overviewname {
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: "Tauri", sans-serif;
+  }
+  
+.Overviewemail {
+    margin-top: -17px;
+  }
+
+/*subraya de nombre, email*/
+.Overviewhr {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(182, 182, 182, 0.801), transparent); 
+    border: none;
+    margin-top: -10px;
+}
+
+/*simbolo corazon*/
+.fa-solid.fa-heart {
+    background-color: white; 
+    border: 1px solid; 
+    border-radius: 5px;
+    cursor: pointer; 
+    color: #C1D72F; 
+    font-size: 13px; 
+    transition: all 0.3s ease;
+    padding: 5px;
+  }
+  
+.fa-solid.fa-heart.favorite,
+.fa-solid.fa-heart:hover{
+    color: white; 
+    background-color: #C1D72F; 
+    border-radius: 5px;
+  }
+
+  /*boton para remover de favorito*/
+.Overviewremove {
+    background-color: transparent; 
+    border: 1px solid #CF6679; 
+    border-radius: 7px;
+    color:#CF6679; 
+    padding: 7px 10px;
+    font-size: 10px;
+    cursor: pointer; 
+    transition: all 0.3s ease;
+  }
+  
+.Overviewremove:hover {
+    background-color: #CF6679; 
+    border-color: transparent; 
+    color: white; 
+  }
+
+  
+
+  
+  /* Estilos responsive */
+@media screen and (max-width: 768px) {
+.Overviewcontainer {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+}
+    
+.Overviewcard {
+    font-size: 14px; /*tamaño de texto*/
+    padding: 5px; /* Ajustar el espaciado interno */
+}
+}
+
+@media screen and (max-width: 576px) {
+    .Overviewphoto img {
+      width: 100px; 
+      height: 100px; 
+    }
+    .Overviewname,
+    .Overviewemail {
+      font-size: 12px;
+    }
+}
+
+/*responsive para idea de smartwatch*/
+@media screen and (max-width: 320px){
+    .Overviewphoto img {
+      width: 80px; 
+      height: 80px; 
+    }
+    .Overviewname,
+    .Overviewemail {
+      font-size: 11px; 
+    }
+
+    .Overviewtitle{
+      font-size: 25px;
+    }
+    }
+

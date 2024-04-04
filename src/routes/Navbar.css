@@ -1,0 +1,281 @@
+/* Navbar.css */
+.Navbarcontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-bottom: 1px solid #ccc; 
+  border-image: linear-gradient(to right,  rgba(182, 182, 182, 0.594),  rgba(182, 182, 182, 0.801),  rgba(182, 182, 182, 0.594)); /* Degradado en el borde inferior */
+  border-image-slice: 1;
+  padding: 5px 5px;
+  padding-top: 15px;
+  position: fixed; 
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.fa-solid.fa-address-book {
+  font-size: 40px;
+  margin-left: 30px;
+  color:  #abbe2c;
+}
+
+.fa-solid.fa-address-book:hover{
+  color: #CF6679;
+}
+
+.Navbaroutes {
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Lato", sans-serif;
+}
+
+.Navbarlink {
+  margin-right: 60px;
+  color: black;
+  text-decoration: none;
+}
+
+.Navbarlink:hover,
+.Navbarlink:focus,
+.Navbarlink:active {
+  color: #C1D72F; 
+}
+
+.Navbarnew {
+  background-color: #C1D72F;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 9px 5px -3px rgba(0,0,0,0.12);
+  -moz-box-shadow: 0px 9px 5px -3px rgba(0,0,0,0.12);
+  box-shadow: 0px 9px 5px -3px rgba(0,0,0,0.12);
+}
+
+.Navbarnew:hover,
+.Navbarnew:focus,
+.Navbarnew:active {
+  background-color: #CF6679; 
+  color: white; 
+}
+
+
+/* Burger menu */
+.BurgerMenu {
+  display: none;
+  cursor: pointer;
+  color: #C1D72F;
+  margin-top: 10px;
+  font-size: 50px;
+}
+
+
+/* Media query para dispositivos pequeños */
+@media (max-width: 768px) {
+  .Navbaroutes {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: white;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); 
+    z-index: 1;
+    align-items: center; 
+    
+  }
+
+  .Navbaroutes.active {
+    display: flex;
+
+  }
+
+  .Navbarlink {
+    margin: 10px 0;
+  }
+
+  .Navbarlink:hover,
+  .Navbarlink:focus,
+  .Navbarlink:active {
+    color: #C1D72F; 
+  }
+
+
+  .BurgerMenu {
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px; 
+    height: 20px; 
+    cursor: pointer;
+    position: fixed; 
+    top: 10px; 
+    right: 20px; 
+    z-index: 1000;
+  }
+
+  .Navbarlogo {
+    justify-content: center; 
+  }
+
+  .Navbaroutes {
+    justify-content: center; 
+    align-items: center;
+  }
+
+
+  .Navbarnew:hover,
+  .Navbarnew:focus,
+  .Navbarnew:active {
+    background-color: #CF6679; 
+    color: white; 
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .Navbaroutes {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: white;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); 
+    z-index: 1;
+    align-items: center; 
+    
+  }
+
+  .Navbaroutes.active {
+    display: flex;
+
+  }
+
+  .Navbarlink {
+    margin: 10px 0;
+  }
+
+  .Navbarlink:hover,
+  .Navbarlink:focus,
+  .Navbarlink:active {
+    color: #C1D72F; 
+  }
+
+
+  .BurgerMenu {
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px; 
+    height: 20px; 
+    cursor: pointer;
+    position: fixed; 
+    top: 10px; 
+    right: 20px; 
+    z-index: 1000;
+  }
+
+  .Navbarlogo {
+    justify-content: center; 
+  }
+
+  .Navbaroutes {
+    justify-content: center; 
+    align-items: center;
+  }
+
+
+  .Navbarnew:hover,
+  .Navbarnew:focus,
+  .Navbarnew:active {
+    background-color: #CF6679; 
+    color: white; 
+  }
+
+  }
+
+  @media screen and (max-width: 320px){
+    .Navbaroutes {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 40px;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      background-color: white;
+      width: 100%;
+      border-bottom: 1px solid #ccc;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); 
+      z-index: 1;
+      align-items: center; 
+      
+    }
+
+    .Navbaroutes.active {
+      display: flex;
+  
+    }
+  
+    .Navbarlink {
+      margin: 4px 50px 0 0;
+    }
+  
+    .Navbarlink:hover,
+    .Navbarlink:focus,
+    .Navbarlink:active {
+      color: #C1D72F; 
+    }
+  
+  
+    .BurgerMenu {
+      display: flex; 
+      flex-direction: column;
+      justify-content: space-between;
+      width: 25px; 
+      height: 20px; 
+      cursor: pointer;
+      position: fixed; 
+      top: 5px; 
+      right: 20px; 
+      z-index: 1000;
+    }
+  
+    .Navbarlogo {
+      justify-content: center; 
+    }
+  
+    .Navbaroutes {
+      justify-content: center; 
+      align-items: center;
+    }
+  
+  
+    .Navbarnew:hover,
+    .Navbarnew:focus,
+    .Navbarnew:active {
+      background-color: #CF6679; 
+      color: white; 
+    }
+
+    .fa-solid.fa-address-book{
+      font-size: 25px;
+      margin-left: 14px;
+    }
+  
+    }
+
+
+
+
+
+

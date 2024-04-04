@@ -1,0 +1,114 @@
+.Contactcontainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    grid-gap: 20px;
+}
+
+.Contactcard {
+    border: 1px transparent gray;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+    -webkit-box-shadow: -1px 0px 18px -8px rgba(84,84,84,1);
+    -moz-box-shadow: -1px 0px 18px -8px rgba(84,84,84,1);
+    box-shadow: -1px 0px 18px -8px rgba(84,84,84,1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.Contactcard:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al 110% cuando se pasa el cursor */
+    background-color: #E9F5E3;
+}
+
+.Contactphoto img{
+        border-radius: 50%;
+    border: 5px solid #C1D72F;
+    width: 110px; 
+    height: 110px; 
+}
+
+.Contactitle {
+    font-family: "Lato", sans-serif;
+    font-size: 35px;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    letter-spacing: 1.5px;
+    line-height: 1.2;
+}
+
+.fa-solid.fa-trash{
+    background-color: white; 
+    border: 1px solid; 
+    border-radius: 5px;
+    cursor: pointer; 
+    color: #CF6679; 
+    margin-right: 15px;
+    font-size: 12px; 
+    transition: all 0.3s ease; 
+    padding: 5px;
+}
+
+.fa-solid.fa-trash:hover{
+    background-color: #CF6679; 
+    color: white;
+}
+
+.Contacthr{
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(182, 182, 182, 0.801), transparent); 
+    border: none;
+}
+
+.Contactname{
+    margin-top: 10px;
+    font-family: "Tauri", sans-serif;
+}
+
+.Contactemail{
+    margin-top: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+.Contactcontainer {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+}
+    
+.Contactcard {
+    font-size: 14px; /* Ajustar el tamaño de fuente para dispositivos más pequeños */
+    padding: 5px; /* Ajustar el espaciado interno */
+    }
+}
+@media screen and (max-width: 576px) {
+    
+.Contactphoto img {
+    width: 110px; 
+    height: 110px; 
+}
+    
+.Contactname,
+.Contactemail{
+    font-size: 12px; /* Ajustar el tamaño de fuente del nombre y correo electrónico para dispositivos aún más pequeños */
+    }
+}
+
+@media screen and (max-width: 320px){
+    .Contactphoto img {
+    width: 80px; 
+    height: 80px; 
+    }
+    .Contactname,
+    .Contactemail {
+      font-size: 11px; /* Ajustar el tamaño de fuente del nombre y correo electrónico para dispositivos aún más pequeños */
+    }
+
+    .Contactitle{
+    font-size: 25px;
+    }
+
+    }
+
